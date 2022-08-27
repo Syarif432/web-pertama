@@ -1,0 +1,411 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #1a2238;
+    color: #eaeaea;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    margin-right: auto;
+    display: flex;
+    gap: 6px;
+}
+
+.logo-img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 35px;
+}
+
+.logo-title {
+    cursor: pointer;
+    transition: all .5s ease 0s;
+    font-family: 'Sofia';
+    font-size: 22px;
+}
+
+.logo:hover {
+    color: #ff6a3d;
+}
+
+.btn-cta {
+    margin-right: 10px;
+    border: none;
+    background-color: #ff6a3d;
+    font-size: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #eaeaea;
+}
+
+.btn-cta:hover {
+    background-color: #ec42f5;
+}
+
+nav ul {
+    display: flex;
+    padding: 20px;
+}
+
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+a {
+    transition: all .5s ease 0s;
+    color: #eaeaea;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    transform: rotate(2deg);
+    color: #ff6a3d;
+}
+
+/* ---------- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.img-foto {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+/* ---------- */
+
+.parallax {
+    background-image: url('Assets/Foto/cover.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250vh;
+}
+
+.tentang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(#1a2238, rgba(6, 3, 59, 0.5));
+    color: #eaeaea;
+    padding: 20px;
+}
+
+.mt-10 {
+    margin-top: 15px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card-item {
+    text-align: center;
+    width: 25%;
+    background: #f7f7f7;
+    color: #222;
+    padding: 24px;
+    height: 300px;
+    box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card-description {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.icon {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    padding: 4px;
+}
+
+/* ---------- */
+
+.container-flip {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.patner {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.patner-title {
+    border-radius: 1em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background-image: linear-gradient(#1a2238, rgba(6, 3, 59, 0.5));
+    width: 150px;
+    color: #eaeaea;
+}
+
+.flip-card {
+    display: flex;
+    gap: 8px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    width: 300px;
+    height: 300px;
+    box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-flip-front,
+.card-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-flip-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.card-flip-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-flip-back h1 {
+    margin-top: 10px;
+}
+
+.pesan {
+    padding: 20px;
+}
+
+.note {
+    display: none;
+}
+
+/* --------- */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1a2238;
+    color: #eaeaea;
+}
+
+@media screen and (max-width: 400px) {
+
+    .parallax {
+        height: 350vh;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-item {
+        width: 100%;
+        opacity: .90;
+        background: #1a2238;
+        color: #eaeaea;
+
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .intro {
+        margin-top: 20px;
+    }
+
+    .img-foto {
+        padding: 0;
+    }
+
+    .container-flip {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .note {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #1a2238;
+        z-index: 9;
+    }
+
+    nav ul {
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        margin-bottom: 60px;
+    }
+
+    footer .title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .parallax {
+        height: 330vh;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-item {
+        width: 100%;
+        opacity: .90;
+        background: #1a2238;
+        color: #eaeaea;
+
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .intro {
+        margin-top: 20px;
+    }
+
+    .img-foto {
+        padding: 0;
+    }
+
+    .container-flip {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .note {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #1a2238;
+        z-index: 9;
+    }
+
+    nav ul {
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        margin-bottom: 60px;
+    }
+
+    footer .title {
+        font-size: 12px;
+    }
+}
